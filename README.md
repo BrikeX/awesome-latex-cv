@@ -39,14 +39,14 @@ More informations about the original Christophe Roger (Darwiin) template can be 
 
 ## The Latex file structure
 
-```matlab
+```text
 % cls file
 awesome-source-cv.cls   
 
 % main file
 huajh-awesome-cv.tex
 
-%subsection
+% subsection
   - section_headline.tex
   - section_education.tex
   - section_publications.tex
