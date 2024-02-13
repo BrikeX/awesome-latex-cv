@@ -54,7 +54,8 @@
 \RequirePackage{url,parskip} 	    % other packages for formatting
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
-\RequirePackage[margin=1.5cm]{geometry}
+% \RequirePackage[margin=1.5cm]{geometry}
+\RequirePackage[margin={1cm, 0.5cm}]{geometry}
 \RequirePackage{fontawesome}
 \RequirePackage{hyperref}\hypersetup{hidelinks}
 \RequirePackage{titlesec}
@@ -241,6 +242,10 @@
 % Usage: \smartphone{<mobile phone number>}
 \newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
 
+% Render author's degree
+% Usage: \degree{<the degree got from a university>}
+\newcommand*{\degree}[1]{\socialtext{\faMortarBoard}{#1}}
+
 % Render author's tagline
 \newcommand\resumetitle[1]{
   \ifundef{\@
@@ -278,7 +283,8 @@
   \ifdef{\@photodiameter}{
     \begin{minipage}{\@photodiameter}
       \begin{tikzpicture}%
-        \node[circle, text=white, minimum size=2.5cm,
+        % \node[circle, text=white, minimum size=2.5cm,
+        \node[text=white, minimum width=2.5cm, minimum height=3.5cm,
           path picture={\node at (path picture bounding box.center){
                 \includegraphics[width=2.5cm]{\@photo}
               };
@@ -308,7 +314,8 @@
         %				}]{ };
         %				\end{tikzpicture}		
         \begin{tikzpicture}%
-          \node[text=white, minimum width=2.8cm, minimum height=2.8cm, %minimum size=2.8cm,
+          % \node[text=white, minimum width=2.8cm, minimum height=2.8cm, %minimum size=2.8cm,
+          \node[text=white, minimum width=2.5cm, minimum height=3.5cm, %minimum size=2.8cm,
             path picture={\node at (path picture bounding box.center){
                   \includegraphics[width=2.5cm]{\@photo}
                 };
@@ -320,7 +327,7 @@
       %      \end{minipage}
 
     }{}
-    \bigskip
+    % \bigskip
   }
 }
 
@@ -360,7 +367,7 @@
 
 % Define the 'experiences' environment
 \newenvironment{experiences}{%
-  \begin{longtable}{R{\leftcolumn}|E}
+  \begin{longtable}{R{0.6\leftcolumn}|E}
     }{%
   \end{longtable}
 }
@@ -377,8 +384,9 @@
   \textsc{#1}    & \textsc{#2, #3, #4}   								\\*
   \textsc{#5}    & \begin{minipage}[t]{\rightcolumnlength}
     #6
-  \end{minipage}										\\*
-  & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+  \end{minipage}										\\
+  % \end{minipage}										\\*
+  % & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
 }
 
 % Render a consultant experience in the experiences environment
