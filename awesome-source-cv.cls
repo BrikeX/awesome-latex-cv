@@ -109,7 +109,9 @@
 \hyphenation{im-pre-se}
 
 % Setup fonts
-\defaultfontfeatures{Mapping=tex-text}
+% \defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{Ligatures=TeX}
+
 %
 
 %-------------------------------------------------------------------------------
