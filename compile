@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
 lualatex awesome-cv.tex
+lualatex awesome-cv.tex
+lualatex awesome-cv.tex
