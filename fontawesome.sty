@@ -39,25 +39,25 @@
 %                xe- and lualatex implementation
 %-------------------------------------------------------------------------------
 \iffontawesome@otf
-\usepackage{fontspec}
+  \usepackage{fontspec}
 
-% definition of \FA as a shortcut to load the Font Awesome font
-\newfontfamily{\FA}{FontAwesome}
+  % definition of \FA as a shortcut to load the Font Awesome font
+  \newfontfamily{\FA}{FontAwesome}
 
-% icon-specific commands
-\input{fontawesomesymbols-xeluatex.tex}
+  % icon-specific commands
+  \input{fontawesomesymbols-xeluatex.tex}
 
-%-------------------------------------------------------------------------------
-%                (pdf)latex implementation
-%-------------------------------------------------------------------------------
+  %-------------------------------------------------------------------------------
+  %                (pdf)latex implementation
+  %-------------------------------------------------------------------------------
 \else
-% definition of \FA... as a shortcut to load the Font Awesome font
-\DeclareRobustCommand\FAone{\fontencoding{U}\fontfamily{fontawesomeone}\selectfont}
-\DeclareRobustCommand\FAtwo{\fontencoding{U}\fontfamily{fontawesometwo}\selectfont}
-\DeclareRobustCommand\FAthree{\fontencoding{U}\fontfamily{fontawesomethree}\selectfont}
+  % definition of \FA... as a shortcut to load the Font Awesome font
+  \DeclareRobustCommand\FAone{\fontencoding{U}\fontfamily{fontawesomeone}\selectfont}
+  \DeclareRobustCommand\FAtwo{\fontencoding{U}\fontfamily{fontawesometwo}\selectfont}
+  \DeclareRobustCommand\FAthree{\fontencoding{U}\fontfamily{fontawesomethree}\selectfont}
 
-% icon-specific commands
-\input{fontawesomesymbols-pdftex.tex}
+  % icon-specific commands
+  \input{fontawesomesymbols-pdftex.tex}
 
 \fi
 
