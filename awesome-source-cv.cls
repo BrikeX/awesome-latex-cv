@@ -210,7 +210,7 @@
 
 % Render author's infos
 % Usage: \infos{<infos>}
-\newcommand*{\infos}[1]{\socialtext{\infoSymbol}{#1}}
+\newcommand*{\infos}[1]{\socialtext{\faInfoCircle}{#1}}
 
 % Render author's homepage
 % Usage: \homepage{<homepage>}
@@ -245,6 +245,10 @@
 % Render author's degree
 % Usage: \degree{<the degree got from a university>}
 \newcommand*{\degree}[1]{\socialtext{\faMortarBoard}{#1}}
+
+% Render author's job
+% Usage: \job{<job information>}
+\newcommand*{\job}[1]{\socialtext{\faBriefcase}{#1}}
 
 % Render author's tagline
 \newcommand\resumetitle[1]{
